@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ParkController;
+use App\Http\Controllers\DuckController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -11,4 +12,6 @@ Route::get('/user', function (Request $request) {
 Route::post('parks',[ParkController::class,'store']);
 Route::get('parks',[ParkController::class,'index']);
 Route::get('parks/{park}',[ParkController::class,'show']);
+
+Route::post('ducks',[DuckController::class,'store']);
 
