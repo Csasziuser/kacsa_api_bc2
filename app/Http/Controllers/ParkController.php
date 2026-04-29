@@ -46,13 +46,13 @@ class ParkController extends Controller
      */
     public function show(string $park)
     {
-        $park = Park::find($park);
+        $park = Park::find($park)->with('ducks')->get();
 
         if (!$park) {
             return response()->json(['uzenet' => 'Nincs ilyen park az adatbázisban!'],404,options:JSON_UNESCAPED_UNICODE);
         }
 
-        return response()->json($park->ducks(),options:JSON_UNESCAPED_UNICODE);
+        return response()->json($park,options:JSON_UNESCAPED_UNICODE);
     }
 
     /**
