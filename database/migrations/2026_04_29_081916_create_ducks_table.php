@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->string('species');
             $table->integer('band_number')->unique();
-            $table->foreignId('park_id')->constrained()->nullable();
+            $table->foreignId('park_id')->nullable()->constrained();
             $table->timestamps();
         });
     }

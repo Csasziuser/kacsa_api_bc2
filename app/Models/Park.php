@@ -11,6 +11,7 @@ class Park extends Model
     protected $fillable = 
         ['name','district', 'pond_count'];
 
+
     public function ducks(){
         return $this->hasMany(Duck::class);
     }

@@ -10,6 +10,7 @@ class Duck extends Model
         ['name', 'species', 
             'band_number', 'park_id'];
 
+
     public function park(){
         return $this->belongsTo(Park::class);
     }

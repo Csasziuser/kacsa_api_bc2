@@ -14,4 +14,6 @@ Route::get('parks',[ParkController::class,'index']);
 Route::get('parks/{park}',[ParkController::class,'show']);
 
 Route::post('ducks',[DuckController::class,'store']);
-
+Route::get('/ducks',[DuckController::class, 'index']);
+Route::put('/ducks/{id}/relocate',[DuckController::class,'relocate']);
+Route::get('ducks/wandering',[DuckController::class,'wandering']);
